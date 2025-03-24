@@ -26,8 +26,9 @@
 		- Không gian 3 chiều: hàm số *tuyến tính* - đồ thị dạng *mặt phẳng*.
 		- Không gian nhiều hơn 3 chiều: *siêu phẳng (hyperplane)*.
 		- Các hàm số tuyến tính là các hàm đơn giản nhất, vì chúng thuận tiện trong việc hình dung và tính toán.
+
 # II. Toán học
-## 1. Linear Regression
+## 1. Linear Regression (Hồi quy tuyến tính)
 - Đặt:
 	- $w=[w_0, w_1, w_2, w_3]^T$ là vector (cột) hệ số cần phải tối ưu;
 	- $\bar{x} = [1, x_1, x_2, x_3]$ là vector (hàng) dữ liệu đầu vào.
