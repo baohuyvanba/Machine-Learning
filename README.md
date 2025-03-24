@@ -7,9 +7,10 @@ This repository contains implementations of various machine learning algorithms,
 - [ ] Decision Trees
 - [ ] Random Forests
 - [ ] Support Vector Machines (SVM)
-- [ ] K-Nearest Neighbors (KNN)
+- [x] K-Nearest Neighbors (KNN)
 - [x] K-Means Clustering
 - [x] DBSCAN
+- [x] Gradient Descent
 - [ ] Principal Component Analysis (PCA)
 - [ ] Neural Networks
 
