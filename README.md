@@ -7,7 +7,7 @@ This repository contains implementations of various machine learning algorithms,
 - [x] DBSCAN
 - [x] K-Nearest Neighbors (KNN)
 - [x] Gradient Descent
-- [ ] Logistic Regression
+- [x] Logistic Regression
 - [ ] Decision Trees
 - [ ] Random Forests
 - [ ] Support Vector Machines (SVM)
