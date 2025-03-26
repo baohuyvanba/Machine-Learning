@@ -3,14 +3,14 @@ This repository contains implementations of various machine learning algorithms,
 
 ## Algorithms Implemented
 - [x] Linear Regression
+- [x] K-Means Clustering
+- [x] DBSCAN
+- [x] K-Nearest Neighbors (KNN)
+- [x] Gradient Descent
 - [ ] Logistic Regression
 - [ ] Decision Trees
 - [ ] Random Forests
 - [ ] Support Vector Machines (SVM)
-- [x] K-Nearest Neighbors (KNN)
-- [x] K-Means Clustering
-- [x] DBSCAN
-- [x] Gradient Descent
 - [ ] Principal Component Analysis (PCA)
 - [ ] Neural Networks
 
