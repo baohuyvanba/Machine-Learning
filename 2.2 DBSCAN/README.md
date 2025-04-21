@@ -56,7 +56,7 @@
 	- Các điểm thuộc vùng mật độ thấp $\to$ không có kết nối trực tiếp đến điểm trung tâm $\to$ biên cụm/nhiễu.
 ### 1.3 Density-Reachable
 - **Khả năng tiếp cận mật độ** liên quan tới cách hình thành một chuỗi liên kết điểm trong cụm.
-- Cụ thể, trong tập chuỗi điểm $\{P_i\}_{i=1}^{n} \subset \mathcal{D}$ nếu mà bất kì điểm $P_i$ nào cũng có thể *tiếp cận trực tiếp mật độ* (Định nghĩa trên) bởi $P_{i-1}$ theo tham số xác định $\to$ điểm $P = P_n$ *có khả năng kết nối mật độ* tới điểm $Q = P_1$.
+- Cụ thể, trong tập chuỗi điểm <img src="https://latex.codecogs.com/svg.image?\{P_i\}^{n}_{i=1}\subset\mathcal{D}" alt="latex"/> nếu mà bất kì điểm $P_i$ nào cũng có thể *tiếp cận trực tiếp mật độ* bởi $P_{i-1}$ theo tham số xác định $\to$ điểm $P = P_n$ *có khả năng kết nối mật độ* tới điểm $Q = P_1$.
 
 - Từ đó suy ra, hai điểm $P_i, P_j \in \{P_i\}_{i=1}^n$ thỏa $i<j$ thì $P_j$ có khả năng kết nối mật độ với $P_i$.
 	- *Hai điểm này sẽ thuộc một cụm*.
@@ -82,13 +82,11 @@ Phân loại dạng điểm trong DBSCAN.
 
 - Xét cặp điểm $P$ và $Q$:
 	- $P, Q$ có khả năng kết nối mật độ với nhau: hai điểm thuộc chung 1 cụm.
-	
-	- $\begin{cases} P \text{ kết nối mất độ } Q \\[4pt] Q \text{ KHÔNG kết nối mất độ } P \end{cases}$ : $P$ điểm lõi, $Q$ điểm biên.
-	
+	- $P$ kết nối mật độ $Q$ và $Q$ KHÔNG kết nối mật độ $P$: $P$ điểm lõi, $Q$ điểm biên.
 	- $P, Q$ không kết nối mật độ: hai cụm khác nhau hoặc hai điểm nhiễu.
+
 # III. DBSCAN Algorithms
 ## 1. Algorithm
-![[attachments/Pasted image 20241113175604.png|center]]
 - Thuật toán thực hiện lan truyền mở rộng dần phạm vi cụm tới khi chạm tới các điểm biên thì sẽ chuyển sang cụm mới và lặp lại quá trình trên.
 - Qui trình của thuật toán:
 	- **Bước 1:** Thuật toán lựa chọn một điểm dữ liệu bất kì. Sau đó tiến hành xác định các _điểm lõi_ và _điểm biên_ thông qua _vùng lân cận epsilon_ bằng cách lan truyền theo liên kết chuỗi các điểm thuộc cùng một cụm.
@@ -121,8 +119,11 @@ Phân loại dạng điểm trong DBSCAN.
 	- Khoảng cách được sử dụng phổ biến nhất là `euclidean distance`.
 ## 3. Huấn luyện mô hình.
 Bộ dữ liệu $\texttt{shopping-data}$ ([link](https://raw.githubusercontent.com/phamdinhkhanh/datasets/cf391fa1a7babe490fdd10c088f0ca1b6d377f59/shopping-data.csv)) gồm 200 mẫu về điểm chi tiêu của khách hàng.
-![[attachments/Pasted image 20241113180420.png|400]]
-****
+
+<div align="center">
+  <img src="./attachments/Example.png" width="400"/>
+</div>
+
 - Mô hình không chịu ảnh hưởng bởi nhiễu (dữ liệu ngoại lai) như K-means nên có thể lược bỏ bước lọc nhiễu.
 - Ở đây, ta nhận thấy có sự khác biệt lớn giữa các trường dữ liệu về đơn vị. Do đó, ta cần **chuẩn hóa dữ liệu** để đồng nhất đơn vị giữa chúng.
 ```python
